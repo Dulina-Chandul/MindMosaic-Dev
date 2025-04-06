@@ -1,16 +1,26 @@
-import { useState } from "react";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import MosaAI from "./pages/MosaAI";
+import CreativeSuite from "./pages/CreativeSuite";
+import CommunityGallery from "./pages/CommunityGallery";
+import Challenges from "./pages/Challenges";
+import Resources from "./pages/Resources";
+import Settings from "./pages/Settings";
+import Layout from "./components/Layout";
 
-import { Button } from "./components/ui/button";
-
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <div>
-      <p className="text-2xl font-bold">Hello World</p>
-      <Button className="bg-red-500 text-white">Click</Button>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout><Dashboard /></Layout>} />
+      <Route path="/mosa-ai" element={<Layout><MosaAI /></Layout>} />
+      <Route path="/creative-suite" element={<Layout><CreativeSuite /></Layout>} />
+      <Route path="/community-gallery" element={<Layout><CommunityGallery /></Layout>} />
+      <Route path="/challenges" element={<Layout><Challenges /></Layout>} />
+      <Route path="/resources" element={<Layout><Resources /></Layout>} />
+      <Route path="/settings" element={<Layout><Settings /></Layout>} />
+    </Routes>
   );
-}
+};
 
 export default App;
