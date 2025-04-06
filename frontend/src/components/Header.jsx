@@ -12,7 +12,7 @@ const Header = () => {
     <header className="bg-white py-4 px-6 shadow-sm">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-semibold text-gray-800 font-serif">Good Morning, Sameesh</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">Good Morning, Sameesh</h2>
           <p className="text-sm text-gray-500 mt-1">{formattedDate}</p>
         </div>
         
@@ -21,7 +21,7 @@ const Header = () => {
             <Input 
               type="search" 
               placeholder="Search resources..." 
-              className="pl-10 pr-4 py-2 rounded-md bg-white shadow-sm text-gray-600 text-sm border-0 focus:ring-1 focus:ring-[#4ABABA]"
+              className="pl-10 pr-4 py-2 rounded-md bg-white shadow-sm text-gray-600 text-sm"
             />
             <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
               <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
