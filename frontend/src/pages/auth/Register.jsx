@@ -40,10 +40,17 @@ const Register = () => {
     // Remove confirmPassword before sending to API
     const { confirmPassword, ...registerData } = formData;
     
+    // Log the data being sent
+    console.log('Sending registration data:', registerData);
+    
     register(registerData, {
       onSuccess: () => {
         // Redirect to login page after successful registration
         navigate('/login', { state: { message: 'Registration successful! Please log in.' } });
+      },
+      onError: (error) => {
+        // Log the error for debugging
+        console.error('Registration error:', error);
       }
     });
   };
